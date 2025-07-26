@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Aprende Ya!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #8d6e63;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .content h2 {
+            color: #5d4037;
+            font-size: 28px;
+        }
+
+        .content p {
+            color: #6d4c41;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 90%;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .consulta-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffcc80;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .consulta-link {
+            color: #4e342e;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .consulta-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a ¡Aprende Ya!</h1>
+    </header>
+
+    <!-- Cuadro de "Consulte su duda" con enlace funcional -->
+    <div class="consulta-box">
+        <a href="{{ url_for('mostrar_preguntas') }}" class="consulta-link">Consulte su duda</a>
+    </div>
+
+    <div class="content">
+        <h2>Tu espacio para resolver dudas y compartir conocimiento</h2>
+        <img src="{{ url_for('static', filename='img/portada.jpg') }}" alt="Imagen de portada">
+    </div>
+</body>
+</html>
